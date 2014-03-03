@@ -29,14 +29,14 @@ Once you've installed it, just switch the layout of your view to one of two diff
 Using the taglib
 ----------------
 
-The plugin includes a basic taglib that makes it easy to do the somewhat wordy Bootstrap form control layouts as well as a
+The plugin includes a basic taglib that makes it easy to do the somewhat wordy Bootstrap form field layouts as well as a
 Bootstrap-friendly replacement for <g:paginate />.
 
 Pagination is just a matter of using <bootstrap:paginate />:
 
     <bootstrap:paginate total="${scaffoldedThingInstanceCount ?: 0}" />
 
-The form control is pretty straightforward, creating a bootstrap form-group, <label />, inline errors, and so forth:
+The field tag is pretty straightforward, creating a bootstrap form-group, <label />, inline errors, and so forth:
 
     <g:form url="[resource:personInstance, action:'update']" method="PUT"  class="form form-horizontal">
         <bootstrap:field
