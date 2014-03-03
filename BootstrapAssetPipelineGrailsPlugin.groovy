@@ -13,11 +13,11 @@ class BootstrapAssetPipelineGrailsPlugin {
     def author = "Joe Rinehart"
     def authorEmail = "joe.rinehart@gmail.com"
     def description = '''\
-Quickly sets up Twitter Bootstrap via the asset-pipeline plugin, providing asset- and CDN-based layouts and basic scaffold templates.
+Quickly sets up Twitter Bootstrap via the asset-pipeline plugin, providing a few convenient tags, asset-pipeline and CDN-based layouts, and basic scaffold templates.
 '''
 
     // URL to the plugin's documentation
-    def documentation = "http://grails.org/plugin/bootstrap-asset-pipeline"
+    def documentation = "https://github.com/joeRinehart/bootstrap-asset-pipeline"
 
     // Extra (optional) plugin metadata
 
