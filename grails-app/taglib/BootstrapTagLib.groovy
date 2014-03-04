@@ -30,7 +30,7 @@ class BootstrapTagLib extends ValidationTagLib {
         def required = ( ( attrs?.required && attrs.required ) ? true : false )
 
         if ( !field ) {
-            throw new Exception( "'field' is required" )
+            throwTagError "'field' is required"
         }
 
         out << "\n<div class=\"${className} ${hasErrors(bean: bean, field: field, 'has-error')} ${required ? 'required' : '' }\">\n\t"
@@ -45,9 +45,8 @@ class BootstrapTagLib extends ValidationTagLib {
         def required = ( ( attrs?.required && attrs.required.toString() == 'true' ) ? true : false )
 
         if ( !field || !label ) {
-            throw new Exception( "'field', and 'label' are required" )
+            throwTagError "'field', and 'label' are required"
         }
-
 
         out << "<label class=\"" + labelColumnClass + ( required ? '' : ' optional-label' ) + " control-label\" for=\"${attrs.id ?: field}\">\n\t\t"
         if ( required ) {
@@ -74,7 +73,7 @@ class BootstrapTagLib extends ValidationTagLib {
         String description = attrs.description
 
         if ( !field ) {
-            throw new Exception( "'field' is required" )
+            throwTagError "'field' is required"
         }
 
         if ( !description && !bean?.errors?.hasFieldErrors( field ) ) {
