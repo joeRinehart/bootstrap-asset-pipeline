@@ -5,7 +5,7 @@ target (installBootstrapScaffolds: "Creates the Bootstrap templates") {
     ant.input(addProperty: "installBootstrapScaffolds.doIt", message: "Replace .gsp contents of ${templatesDir}? ", validArgs: "y,n")
     if (ant.antProject.properties['installBootstrapScaffolds.doIt'] == 'y') {
         ant.copy(todir: templatesDir, overwrite: true) {
-            fileset(dir: srcDir, includes: "**")
+            fileset(dir: srcDir)
         }
         println "Templates created in src/templates/scaffolding."
     }
