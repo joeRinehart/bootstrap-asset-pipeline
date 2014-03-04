@@ -1,0 +1,7 @@
+*.log
+/target
+grails-bootstrap-asset-pipeline-*.zip
+grails-bootstrap-asset-pipeline-*.zip.sha1
+/plugin.xml
+.DS_Store
+/web-app
